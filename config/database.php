@@ -1,7 +1,7 @@
 <?php
     //Database configuration
     $host     = 'localhost'; //=>127.0.0.1
-    $dbname   = 'Pets';
+    $dbname   = 'pets';
     $username = 'postgres';
     $password = 'unicesmag';
     $port     = '5432';

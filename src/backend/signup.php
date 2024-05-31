@@ -6,17 +6,12 @@ include('../../config/database.php');
     $passwd = $_POST['passwd'];
     $enc_pass = md5($passwd);
 
-    /*echo "Your fullname: ". $fullname;
-    echo "Your email: ". $email;
-    echo "Your password: ". $passwd;
-    echo "Your password enc: ". $enc_pass;*/
-
     $sql_validate_email = "SELECT * FROM users WHERE email = '$email'";
     $result = pg_query($conn, $sql_validate_email);
     $total = pg_num_rows($result);
 
     if($total > 0){
-        echo"<script>alert('Email already exis')</scrpt>";
+        echo"<script>alert('Email already exists')</scrpt>";
         header("refresh:0;url=../signup.html");
     }else{
         $sql = "
@@ -26,7 +21,7 @@ include('../../config/database.php');
 
     $ans = pg_query($conn,$sql);
     if ($ans){
-        echo "<script>alert('users has been registers')</script>";
+        echo "<script>alert('User has been registered')</script>";
         header("refresh:0;url=../signin.php");
     }else{
         echo "Error". pg_last_error();

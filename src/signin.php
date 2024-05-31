@@ -21,9 +21,9 @@
     </center>
     <form name="signin-form" action="backend/signin.php" method="post">
         <table border="0" align="center">
-            <tr><td><input type="email" name="email" placeholder="EJEMPLO@gmail.com"  required></td></tr>
+            <tr><td><input type="email" name="email" placeholder="example@example.com"  required></td></tr>
             <tr><td><input type="password" name="passwd" placeholder="*******"  required></td></tr>
-            <tr><td align="center"><button>LOGIN</button>
+            <tr><td align="center"><button>Login</button>
             <tr><td align="center"><a href= "signup.html">Create an account</a> 
         </table>
     </form>
